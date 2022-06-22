@@ -1,0 +1,216 @@
+/********************/
+/* Style guide */
+/********************/
+
+/*
+
+### Layout:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+### Primary:
+
+- Very Dark Magenta: hsl(300, 43%, 22%)
+- Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral:
+
+- Dark Grayish Magenta: hsl(303, 10%, 53%)
+- Light Grayish Magenta: hsl(300, 24%, 96%)
+- White: hsl(0, 0%, 100%)
+
+
+### Typography system:
+
+FONT SIZE SYSTEM (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+### Whitespace
+SPACING SYSTEM (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+### Font-Style:
+
+font-family: 'League Spartan', sans-serif;
+
+### Font size default setup: 
+-Default: 1 rem = 16px
+-Reset: 1 rem = 10px
+10px/16px = 62.5%
+
+- !Font size (paragraph): 15px 
+
+### Font-weights:
+
+- Default: 400
+- Medium: 500
+- SemiBold: 600
+
+### Line-heights:
+- 0.8 for headings
+- 1.6 for paragraphs
+
+### Border-radius
+Default: 10px
+
+*/
+
+/********************/
+/* General setting */
+/********************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html {
+  font-size: 62.5%;
+} */
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(303, 10%, 53%);
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.6;
+}
+
+/*******************************/
+/* General Reusable Components */
+/*******************************/
+
+.container {
+  margin: 0 auto;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.rating {
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 12px;
+  max-width: 600px;
+}
+
+.rating:last-child {
+  margin-bottom: 0;
+}
+
+/*******************************/
+/*  Header */
+/*******************************/
+
+header {
+  text-align: center;
+  padding-top: 64px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+}
+
+header h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 0.8;
+  padding: 0;
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+
+/*******************************/
+/*  Star Rating Section */
+/*******************************/
+
+h2 {
+  color: hsl(300, 43%, 22%);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stars {
+  padding-bottom: 4px;
+}
+
+.star-ratings {
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+}
+
+/*******************************/
+/*  Testiomnial Section */
+/*******************************/
+
+.testimonials {
+  margin-bottom: 48px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+}
+
+.testimonial {
+  margin-bottom: 16px;
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+}
+
+.testimonial-padding {
+  padding: 32px;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.testimonial-header img {
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.testimonial-header span {
+  color: hsl(333, 80%, 67%);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+blockquote {
+  text-align: left;
+  line-height: 1.6;
+}
+
+/*******************************/
+/*  Footer */
+/*******************************/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+background-image: url("/images/bg-pattern-top-mobile.svg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
