@@ -67,18 +67,19 @@ Default: 10px
   box-sizing: border-box;
 }
 
-/* html {
+html {
   font-size: 62.5%;
-} */
+}
 
 body {
   background-color: hsl(0, 0%, 100%);
   color: hsl(303, 10%, 53%);
   font-family: "League Spartan", sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
-  height: 100%;
+  height: 100vh;
   line-height: 1.6;
+  margin: 5% auto;
 }
 
 /*******************************/
@@ -87,64 +88,55 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 2.5rem;
   text-align: center;
 }
 
-.rating {
-  background-color: hsl(300, 24%, 96%);
-  border-radius: 10px;
-  margin-bottom: 16px;
-  padding: 12px;
-  max-width: 600px;
-}
-
-.rating:last-child {
-  margin-bottom: 0;
-}
-
 /*******************************/
-/*  Header */
+/*  Hero Section */
 /*******************************/
 
-header {
+.hero {
   text-align: center;
-  padding-top: 64px;
-  margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 450px;
+  margin: 6.4rem auto 4.8rem auto;
+  max-width: 45rem;
 }
 
-header h1 {
+.hero h1 {
   color: hsl(300, 43%, 22%);
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 600;
   line-height: 0.8;
-  padding: 0;
-  margin-bottom: 32px;
-  padding: 0 24px;
+  margin-bottom: 2.4rem;
+  padding: 0 2.4rem;
+}
+
+.hero-top {
+  margin-bottom: 4.8rem;
 }
 
 /*******************************/
 /*  Star Rating Section */
 /*******************************/
 
+.rating {
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 45rem;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem;
+}
+
+.rating:last-child {
+  margin-bottom: 0;
+}
+
 h2 {
   color: hsl(300, 43%, 22%);
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
-}
-
-.stars {
-  padding-bottom: 4px;
-}
-
-.star-ratings {
-  margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 450px;
 }
 
 /*******************************/
@@ -152,45 +144,43 @@ h2 {
 /*******************************/
 
 .testimonials {
-  margin-bottom: 48px;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 450px;
+  margin: 0 auto 4.8rem auto;
+  max-width: 45rem;
 }
 
 .testimonial {
-  margin-bottom: 16px;
   background-color: hsl(300, 43%, 22%);
   color: hsl(300, 24%, 96%);
   border-radius: 10px;
+  margin-bottom: 2.4rem;
 }
 
 .testimonial-padding {
-  padding: 32px;
+  padding: 3.2rem;
 }
 
 .testimonial-header {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .testimonial-header img {
   border-radius: 50%;
-  margin-right: 24px;
+  margin-right: 2.4rem;
 }
 
 h3 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
 .testimonial-header span {
   color: hsl(333, 80%, 67%);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 blockquote {
@@ -202,6 +192,10 @@ blockquote {
 /*  Footer */
 /*******************************/
 
+footer {
+  margin-top: 6.4rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -210,7 +204,93 @@ blockquote {
   color: hsl(228, 45%, 44%);
 }
 
-background-image: url("/images/bg-pattern-top-mobile.svg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+/*******************************/
+/* Media Queries */
+/*******************************/
+
+@media screen and (min-width: 1020px) {
+  .container {
+    max-width: 122rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+  }
+
+  .grid {
+    display: grid;
+    column-gap: 3.2rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .hero {
+    text-align: left;
+    justify-content: center;
+    margin-top: 6.4rem;
+    padding-right: 8rem;
+  }
+
+  .hero h1 {
+    padding: 0;
+    padding-right: 13rem;
+  }
+
+  .star-ratings {
+    margin-top: 3.6rem;
+  }
+
+  .rating:first-child {
+    transform: translatex(-3rem);
+  }
+
+  /* .rating:nth-child(2) {
+    transform: translateX(1rem);
+  } */
+
+  .rating:last-child {
+    transform: translatex(3rem);
+  }
+
+  .rating {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stars {
+    margin-right: 3rem;
+  }
+
+  .star {
+    padding-top: 4px;
+  }
+
+  .testimonials {
+    max-width: 100%;
+  }
+
+  .testimonial {
+    padding: 2rem;
+  }
+
+  .testimonial-padding {
+    padding: 0;
+  }
+
+  .testimonial:nth-child(2) {
+    transform: translateY(1.5rem);
+  }
+
+  .testimonial:last-child {
+    transform: translateY(3rem);
+  }
+}
